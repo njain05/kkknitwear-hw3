@@ -137,7 +137,24 @@ Mobile-first. A sticky bottom action bar (Call · WhatsApp · Quote) on small sc
 
 ---
 
-## 7. Open items — client input needed
+## 7. Prompt logging — do this every session
+
+`prompt.md` records every prompt used on this project, in order, for later
+comparative analysis across the class's projects.
+
+**Append to it as you go.** After acting on a user prompt that changes the
+project — a new feature, a correction, a decision, a change of direction —
+add an entry: the prompt **verbatim** (typos included), what it produced, and
+one honest note on why it did or didn't work well.
+
+Skip only trivial exchanges ("yes", "carry on") that changed nothing.
+
+Never rewrite earlier entries to look tidier. The corrections and dead ends
+are the point — a log where nothing went wrong teaches nobody anything.
+
+---
+
+## 8. Open items — client input needed
 
 1. ~~Phone/WhatsApp number~~ — resolved from the company business card:
    Avnish Jain +91 93169 15363 (primary, WhatsApp), factory +91 98157 37965.
