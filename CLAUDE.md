@@ -21,8 +21,8 @@ never a transaction.
 
 ### Scope: knitted fabric only — this is deliberate
 
-The company's business card reads *"Mfrs & Fabricators of: Knitted Cloth, Terry
-Towel & Cotton Handkerchief"* and carries two house brands, **DHOOM**
+The company's business card reads _"Mfrs & Fabricators of: Knitted Cloth, Terry
+Towel & Cotton Handkerchief"_ and carries two house brands, **DHOOM**
 (handkerchief) and **K.K. TOWEL**. None of that is on this site, and that is a
 decision the client made, not an oversight.
 
@@ -32,20 +32,20 @@ would blur the positioning. Do not add them, or the brands, without the client
 asking.
 
 Note the distinction: the **Terry Fabric** category is in scope — that is cloth.
-A terry *towel* is not.
+A terry _towel_ is not.
 
 **Positioning: mid-market, reliability-led.** The company is a ~₹1.5–5 Cr proprietorship
 with 11–25 staff. Do not write luxury/couture copy — it invites certification questions
 (Oeko-Tex, GOTS) the business cannot currently answer, and it damages credibility.
-Do not write bargain-basement copy either. The register is: *established, capable,
-easy to deal with.*
+Do not write bargain-basement copy either. The register is: _established, capable,
+easy to deal with._
 
 **USP — lead with flexibility.** The genuine advantage over a large mill is that K.K will
 accept a small lot and turn it around fast. Heritage (36 years) is the trust backup,
 not the headline.
 
 - Tagline: **"Mill-direct knitted fabric. Small lots, quick turnaround."**
-- Supporting: *"Knitting for Ludhiana's garment trade since 1990."*
+- Supporting: _"Knitting for Ludhiana's garment trade since 1990."_
 
 ---
 
@@ -53,18 +53,19 @@ not the headline.
 
 These are not stylistic preferences. Breaking one is a bug.
 
-| # | Rule |
-|---|---|
-| 1 | **Never render a price.** No ₹, no "Rs", no "/kg", no ranges. Everything is *price on request*. |
-| 2 | **No cart, checkout, or payment.** Enquiry only. |
-| 3 | **No raw hex colours in components.** Use the Tailwind theme tokens in `app/globals.css`. |
-| 4 | **One responsive codebase.** Never a separate mobile site or a UA-sniffing branch. |
-| 5 | **Company facts are immutable.** GST, address, year, owner — `lib/site.ts` is the only source. Never invent or "improve" them. |
-| 6 | **Invented specs stay marked.** Any value not recovered from the old site carries `TODO: confirm with client`. |
-| 7 | **Generated textures are never a product's main image**, and are never captioned as a photo of a specific fabric. |
-| 8 | **Static export must keep working.** No server-only APIs in page rendering. |
+| #   | Rule                                                                                                                           |
+| --- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | **Never render a price.** No ₹, no "Rs", no "/kg", no ranges. Everything is _price on request_.                                |
+| 2   | **No cart, checkout, or payment.** Enquiry only.                                                                               |
+| 3   | **No raw hex colours in components.** Use the Tailwind theme tokens in `app/globals.css`.                                      |
+| 4   | **One responsive codebase.** Never a separate mobile site or a UA-sniffing branch.                                             |
+| 5   | **Company facts are immutable.** GST, address, year, owner — `lib/site.ts` is the only source. Never invent or "improve" them. |
+| 6   | **Invented specs stay marked.** Any value not recovered from the old site carries `TODO: confirm with client`.                 |
+| 7   | **Generated textures are never a product's main image**, and are never captioned as a photo of a specific fabric.              |
+| 8   | **Static export must keep working.** No server-only APIs in page rendering.                                                    |
 
 ### On prices
+
 The old site published ₹150–210/kg. The client chose to withhold these. The recovered
 figures live in `docs/internal-reference.md` for the client's own use — they must never
 reach `content/` or any component, because a static export ships its data to the browser.
@@ -153,17 +154,3 @@ Never rewrite earlier entries to look tidier. The corrections and dead ends
 are the point — a log where nothing went wrong teaches nobody anything.
 
 ---
-
-## 8. Open items — client input needed
-
-1. ~~Phone/WhatsApp number~~ — resolved from the company business card:
-   Avnish Jain +91 93169 15363 (primary, WhatsApp), factory +91 98157 37965.
-2. ~~Destination email~~ — resolved: avnishjain10@yahoo.co.in
-3. ~~Registered address conflict~~ — resolved in favour of the business card
-   (St. No. 0, Sekhewal Road, Shivpuri). PIN 141008 retained from the old
-   listing because the card shows none.
-4. Specs, MOQ and lead times for products lacking recovered data.
-5. Whether any certifications exist (changes the trust band).
-6. Higher-resolution photography for detail pages.
-7. A second contact, **Kimti Lal Jain**, appears on the card; his number was
-   redacted on the copy supplied, so he is not listed on the site.
