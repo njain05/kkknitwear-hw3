@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# K.K Knitwear Club
 
-## Getting Started
+**Mill-direct knitted fabric. Small lots, quick turnaround.**
 
-First, run the development server:
+B2B fabric catalogue for [K.K Knitwear Club](https://www.kkknitwearclub.com), a knitted-fabric manufacturer in Ludhiana, Punjab, established 1990. Replaces a dated IndiaMART-templated site.
+
+---
+
+## What this site is
+
+A product catalogue and enquiry channel for business buyers — garment manufacturers, sportswear brands, wholesalers, and buying agents. There is no shopping cart, no checkout, and no pricing. The conversion goal is always an **enquiry**.
+
+17 knitted-fabric categories, 114 recovered product photos, and a quote-basket that builds a WhatsApp/email RFQ in one tap.
+
+---
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 15 (App Router, static export) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Fonts | Instrument Sans · Instrument Serif (Google Fonts) |
+| Images | Custom build-time pipeline (`scripts/optimise-images.mjs`) |
+| Deployment | Vercel (static) |
+
+---
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the static export:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build     # outputs to /out
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/              Pages (App Router)
+components/       UI components + SVG fabric texture generators
+content/          Product data & image manifest — the content layer
+lib/              Site facts (site.ts), product helpers, types
+public/products/  114 recovered product photos
+scripts/          Image pipeline + content validator
+docs/             Internal reference (not shipped)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All company facts (GST, address, phone, owner) live exclusively in `lib/site.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Key features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **17 product categories** with dedicated landing pages
+- **Quote basket** — add products, submit as WhatsApp deep link or email RFQ
+- **114 real product photos** from the original IndiaMART listing
+- **Generated SVG textures** for categories without photos
+- Mobile-first with a sticky Call · WhatsApp · Quote action bar
+- Fully static export — no server required, deployable anywhere
+- Structured data (Organization schema) for SEO
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Licence
+
+All code is MIT. Product photos and company details belong to K.K Knitwear Club, Ludhiana.
