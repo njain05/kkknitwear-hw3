@@ -32,14 +32,17 @@ export const site = {
   },
 
   /**
-   * TODO: confirm with client — the number listed on the old site
-   * (07942802251) is an IndiaMART virtual number and will NOT work for
-   * WhatsApp or direct dialling. Replace both values before launch.
+   * From the company's own business card. Avnish Jain's mobile is the
+   * primary line and the one WhatsApp reaches; the factory number is a
+   * secondary contact. The old site's 07942802251 was an IndiaMART virtual
+   * number and is deliberately not used anywhere.
    */
-  phone: "+919876543210",
-  phoneDisplay: "+91 98765 43210",
-  whatsapp: "919876543210",
-  email: "info@kkknitwearclub.com",
+  phone: "+919316915363",
+  phoneDisplay: "+91 93169 15363",
+  whatsapp: "919316915363",
+  factoryPhone: "+919815737965",
+  factoryPhoneDisplay: "+91 98157 37965",
+  email: "avnishjain10@yahoo.co.in",
 
   hours: "Monday – Saturday, 9:30 am – 7:00 pm",
 } as const;

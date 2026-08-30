@@ -124,9 +124,22 @@ Mobile-first. A sticky bottom action bar (Call · WhatsApp · Quote) on small sc
 
 ## 7. Open items — client input needed
 
-1. **Phone/WhatsApp number.** `lib/site.ts` holds a placeholder. The old site's
-   `07942802251` is an IndiaMART virtual number and will not work for WhatsApp.
-2. Destination email for RFQs.
-3. Specs, MOQ and lead times for products lacking recovered data.
-4. Whether any certifications exist (changes the trust band).
-5. Higher-resolution photography for detail pages.
+1. ~~Phone/WhatsApp number~~ — resolved from the company business card:
+   Avnish Jain +91 93169 15363 (primary, WhatsApp), factory +91 98157 37965.
+2. ~~Destination email~~ — resolved: avnishjain10@yahoo.co.in
+3. **Registered address conflicts between sources.** The old site gives
+   *Street No-1, Kabir Nagar, Sekhonwal Road, Ludhiana 141008*; the business
+   card gives *Kabir Nagar, St. No. 0, Sekhewal Road, Shivpuri, Ludhiana* with
+   no PIN. Street number, road spelling and locality all differ. `lib/site.ts`
+   still carries the old-site version. Do not guess — confirm which is correct.
+4. **The company makes more than this site shows.** The business card reads
+   "Mfrs & Fabricators of: Knitted Cloth, Terry Towel & Cotton Handkerchief"
+   and carries two brands, **DHOOM** (handkerchief) and **K.K. TOWEL**.
+   Terry and handkerchief lines are absent from the catalogue, and neither
+   brand appears anywhere. This also means the Terry Fabric category is a real
+   line, not a stale listing.
+5. Specs, MOQ and lead times for products lacking recovered data.
+6. Whether any certifications exist (changes the trust band).
+7. Higher-resolution photography for detail pages.
+8. A second contact, **Kimti Lal Jain**, appears on the card; his number was
+   redacted on the copy supplied, so he is not listed on the site.

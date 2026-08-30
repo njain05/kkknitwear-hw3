@@ -52,6 +52,15 @@ export default function ContactPage() {
                 </a>
               </li>
               <li className="border-b border-rule py-4 flex items-baseline justify-between gap-4">
+                <span className="text-ink-3 text-sm">Factory</span>
+                <a
+                  href={`tel:${site.factoryPhone}`}
+                  className="figure-mono text-ink hover:text-indigo transition-colors"
+                >
+                  {site.factoryPhoneDisplay}
+                </a>
+              </li>
+              <li className="border-b border-rule py-4 flex items-baseline justify-between gap-4">
                 <span className="text-ink-3 text-sm">Email</span>
                 <a
                   href={`mailto:${site.email}`}
