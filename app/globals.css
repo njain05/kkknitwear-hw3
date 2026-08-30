@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ---- Paper & Indigo -------------------------------------------------
+     The site chrome stays near-neutral so fabric carries all the colour.
+     Never write a raw hex in a component — extend this block instead. */
+  --color-paper: #faf8f4;
+  --color-paper-2: #f2ede4;
+  --color-paper-3: #e9e2d5;
+  --color-ink: #14161a;
+  --color-ink-2: #3d4148;
+  --color-ink-3: #6b7078;
+  --color-indigo: #2a3a6b;
+  --color-indigo-deep: #1b2748;
+  --color-indigo-soft: #8c9bc4;
+  --color-indigo-wash: #eaedf4;
+  --color-clay: #b4654a;
+  --color-clay-wash: #f6ece7;
+  --color-rule: #e2ddd3;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --text-2xs: 0.6875rem;
+
+  --tracking-display: -0.02em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  ::selection {
+    background: var(--color-indigo);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-indigo);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility label-caps {
+  font-size: var(--text-2xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Display type: Archivo stretched wide, the way mill signage and selvedge
+   stamps are set. Used only for page-level headings. */
+@utility display {
+  font-family: var(--font-sans);
+  font-stretch: 125%;
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  line-height: 0.95;
+}
+
+/* Spec figures read as datasheet data, never as marketing copy. */
+@utility figure-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
 }

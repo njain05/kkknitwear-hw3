@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "assets": "node scripts/fetch-assets.mjs",
+    "validate": "node --no-warnings scripts/validate-content.ts",
+    "check": "npm run validate && npx tsc --noEmit && npm run lint"
   },
   "dependencies": {
     "next": "16.3.3",
