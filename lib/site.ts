@@ -22,9 +22,15 @@ export const site = {
   gstRegistered: "01-07-2017",
   banker: "HDFC Bank",
 
+  /**
+   * Taken from the company business card, which supersedes the old site's
+   * listing (that gave Street No-1 and spelled the road "Sekhonwal", and
+   * omitted Shivpuri). The card carries no PIN, so 141008 is retained from
+   * the previous listing — couriers and map lookups need it.
+   */
   address: {
-    line1: "Street No-1, K.K Knitwear Club",
-    line2: "Kabir Nagar, Sekhonwal Road",
+    line1: "K.K Knitwear Club, St. No. 0",
+    line2: "Kabir Nagar, Sekhewal Road, Shivpuri",
     city: "Ludhiana",
     pin: "141008",
     state: "Punjab",

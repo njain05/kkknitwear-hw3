@@ -19,6 +19,21 @@ There is **no consumer path**. Never add a shopping cart, checkout, payment flow
 "Buy now", wishlist, or per-piece pricing. The conversion goal is always an **enquiry**,
 never a transaction.
 
+### Scope: knitted fabric only — this is deliberate
+
+The company's business card reads *"Mfrs & Fabricators of: Knitted Cloth, Terry
+Towel & Cotton Handkerchief"* and carries two house brands, **DHOOM**
+(handkerchief) and **K.K. TOWEL**. None of that is on this site, and that is a
+decision the client made, not an oversight.
+
+**This site sells knitted fabric by the kilo.** Terry towels and handkerchiefs are
+finished goods sold to a different buyer in a different way, and mixing them in
+would blur the positioning. Do not add them, or the brands, without the client
+asking.
+
+Note the distinction: the **Terry Fabric** category is in scope — that is cloth.
+A terry *towel* is not.
+
 **Positioning: mid-market, reliability-led.** The company is a ~₹1.5–5 Cr proprietorship
 with 11–25 staff. Do not write luxury/couture copy — it invites certification questions
 (Oeko-Tex, GOTS) the business cannot currently answer, and it damages credibility.
@@ -127,19 +142,11 @@ Mobile-first. A sticky bottom action bar (Call · WhatsApp · Quote) on small sc
 1. ~~Phone/WhatsApp number~~ — resolved from the company business card:
    Avnish Jain +91 93169 15363 (primary, WhatsApp), factory +91 98157 37965.
 2. ~~Destination email~~ — resolved: avnishjain10@yahoo.co.in
-3. **Registered address conflicts between sources.** The old site gives
-   *Street No-1, Kabir Nagar, Sekhonwal Road, Ludhiana 141008*; the business
-   card gives *Kabir Nagar, St. No. 0, Sekhewal Road, Shivpuri, Ludhiana* with
-   no PIN. Street number, road spelling and locality all differ. `lib/site.ts`
-   still carries the old-site version. Do not guess — confirm which is correct.
-4. **The company makes more than this site shows.** The business card reads
-   "Mfrs & Fabricators of: Knitted Cloth, Terry Towel & Cotton Handkerchief"
-   and carries two brands, **DHOOM** (handkerchief) and **K.K. TOWEL**.
-   Terry and handkerchief lines are absent from the catalogue, and neither
-   brand appears anywhere. This also means the Terry Fabric category is a real
-   line, not a stale listing.
-5. Specs, MOQ and lead times for products lacking recovered data.
-6. Whether any certifications exist (changes the trust band).
-7. Higher-resolution photography for detail pages.
-8. A second contact, **Kimti Lal Jain**, appears on the card; his number was
+3. ~~Registered address conflict~~ — resolved in favour of the business card
+   (St. No. 0, Sekhewal Road, Shivpuri). PIN 141008 retained from the old
+   listing because the card shows none.
+4. Specs, MOQ and lead times for products lacking recovered data.
+5. Whether any certifications exist (changes the trust band).
+6. Higher-resolution photography for detail pages.
+7. A second contact, **Kimti Lal Jain**, appears on the card; his number was
    redacted on the copy supplied, so he is not listed on the site.
