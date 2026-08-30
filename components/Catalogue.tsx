@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import type { Product, Category, TextureStructure } from "@/lib/types";
 import { ProductCard } from "@/components/ProductCard";
 import { STRUCTURE_LABELS } from "@/components/textures/FabricTexture";
@@ -78,13 +77,8 @@ export function Catalogue({
   items: CatalogueItem[];
   categories: Category[];
 }) {
-  const params = useSearchParams();
-  const initialCategory = params.get("category");
-
   const [query, setQuery] = useState("");
-  const [cats, setCats] = useState<Set<string>>(
-    () => new Set(initialCategory ? [initialCategory] : []),
-  );
+  const [cats, setCats] = useState<Set<string>>(() => new Set());
   const [structures, setStructures] = useState<Set<string>>(new Set());
   const [bands, setBands] = useState<Set<string>>(new Set());
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -290,16 +284,21 @@ export function Catalogue({
         )}
 
         {filtered.length > 0 ? (
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-10">
-            {filtered.map(({ product, photo }, i) => (
-              <ProductCard
-                key={product.slug}
-                product={product}
-                photo={photo}
-                priority={i < 4}
-              />
-            ))}
-          </div>
+          <>
+            {/* The filter panel's heading is desktop-only, so without this the
+                heading order skips from h1 to the cards' h3 on small screens. */}
+            <h2 className="sr-only">Matching fabrics</h2>
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-10">
+              {filtered.map(({ product, photo }, i) => (
+                <ProductCard
+                  key={product.slug}
+                  product={product}
+                  photo={photo}
+                  priority={i < 2}
+                />
+              ))}
+            </div>
+          </>
         ) : (
           <div className="border border-rule py-20 px-6 text-center">
             <p className="text-lg text-ink">No fabric matches those filters.</p>

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { getAllProducts } from "@/lib/products";
+import { getAllProducts, getCategories } from "@/lib/products";
 
 export const dynamic = "force-static";
 
@@ -22,5 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...pages, ...products];
+  const categories: MetadataRoute.Sitemap = getCategories().map((c) => ({
+    url: `${site.url}/fabrics/category/${c.slug}/`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...pages, ...categories, ...products];
 }

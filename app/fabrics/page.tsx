@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
 import {
   getAllProducts,
@@ -37,9 +36,9 @@ export default function FabricsPage() {
         </p>
       </header>
 
-      <Suspense fallback={<div className="py-20 text-ink-3">Loading fabrics…</div>}>
-        <Catalogue items={items} categories={categories} />
-      </Suspense>
+      {/* Rendered on the server: a Suspense boundary here would ship an empty
+          shell and delay every product image until hydration. */}
+      <Catalogue items={items} categories={categories} />
     </div>
   );
 }

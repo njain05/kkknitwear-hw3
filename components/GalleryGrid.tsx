@@ -54,7 +54,7 @@ export function GalleryGrid({ photos }: { photos: GalleryPhoto[] }) {
                 alt={p.productName}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                loading={i < 10 ? "eager" : "lazy"}
+                loading={i < 4 ? "eager" : "lazy"}
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-transform bg-paper/93 px-2.5 py-2 text-2xs text-ink-2 text-left truncate">

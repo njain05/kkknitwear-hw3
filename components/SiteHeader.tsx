@@ -79,7 +79,7 @@ export function SiteHeader({ categories }: { categories: Category[] }) {
                     {categories.map((c) => (
                       <li key={c.slug}>
                         <Link
-                          href={`/fabrics?category=${c.slug}`}
+                          href={`/fabrics/category/${c.slug}`}
                           onClick={() => setRangeOpen(false)}
                           className="block py-1.5 text-sm text-ink-2 hover:text-indigo transition-colors"
                         >
@@ -166,7 +166,7 @@ export function SiteHeader({ categories }: { categories: Category[] }) {
               {categories.map((c) => (
                 <li key={c.slug}>
                   <Link
-                    href={`/fabrics?category=${c.slug}`}
+                    href={`/fabrics/category/${c.slug}`}
                     onClick={() => setMenuOpen(false)}
                     className="block py-2 text-sm text-ink-2"
                   >

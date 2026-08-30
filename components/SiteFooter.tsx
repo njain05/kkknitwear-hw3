@@ -29,8 +29,8 @@ export function SiteFooter({ categories }: { categories: Category[] }) {
               {categories.slice(0, 8).map((c) => (
                 <li key={c.slug}>
                   <Link
-                    href={`/fabrics?category=${c.slug}`}
-                    className="text-sm text-paper/80 hover:text-paper transition-colors"
+                    href={`/fabrics/category/${c.slug}`}
+                    className="text-sm text-paper/80 hover:text-paper transition-colors inline-block py-1"
                   >
                     {c.name}
                   </Link>
@@ -53,7 +53,7 @@ export function SiteFooter({ categories }: { categories: Category[] }) {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-paper/80 hover:text-paper transition-colors"
+                    className="text-sm text-paper/80 hover:text-paper transition-colors inline-block py-1"
                   >
                     {l.label}
                   </Link>
@@ -74,12 +74,12 @@ export function SiteFooter({ categories }: { categories: Category[] }) {
               {site.address.state}, {site.address.country}
             </address>
             <p className="mt-4 text-sm">
-              <a href={`tel:${site.phone}`} className="figure-mono text-paper hover:underline">
+              <a href={`tel:${site.phone}`} className="figure-mono text-paper hover:underline inline-block py-1.5">
                 {site.phoneDisplay}
               </a>
             </p>
             <p className="text-sm">
-              <a href={`mailto:${site.email}`} className="text-paper/80 hover:text-paper">
+              <a href={`mailto:${site.email}`} className="text-paper/80 hover:text-paper inline-block py-1.5">
                 {site.email}
               </a>
             </p>
@@ -103,7 +103,7 @@ export function SiteFooter({ categories }: { categories: Category[] }) {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xs text-paper/60 hover:text-paper transition-colors"
+                className="text-2xs text-paper/60 hover:text-paper transition-colors inline-block py-2"
               >
                 {s.label}
               </a>

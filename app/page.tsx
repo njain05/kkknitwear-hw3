@@ -123,8 +123,8 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10">
-          {featured.map((p, i) => (
-            <ProductCard key={p.slug} product={p} photo={heroImage(p)} priority={i < 4} />
+          {featured.map((p) => (
+            <ProductCard key={p.slug} product={p} photo={heroImage(p)} />
           ))}
         </div>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
             {categories.map((c) => (
               <li key={c.slug}>
                 <Link
-                  href={`/fabrics?category=${c.slug}`}
+                  href={`/fabrics/category/${c.slug}`}
                   className="group flex flex-col justify-between h-full bg-paper p-4 md:p-5 hover:bg-indigo-wash transition-colors min-h-[110px]"
                 >
                   <span className="text-sm md:text-base text-ink group-hover:text-indigo transition-colors">
