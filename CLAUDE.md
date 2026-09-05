@@ -67,7 +67,8 @@ These are not stylistic preferences. Breaking one is a bug.
 ### On prices
 
 The old site published ₹150–210/kg. The client chose to withhold these. The recovered
-figures live in `docs/internal-reference.md` for the client's own use — they must never
+figures live in `../documentation/kkknitwear/internal-reference.md`, deliberately
+outside this repo, for the client's own use — they must never
 reach `content/` or any component, because a static export ships its data to the browser.
 
 ---
@@ -97,7 +98,8 @@ content/        product data + image manifest (the content layer)
 lib/            site facts, product helpers, types
 scripts/        fetch-assets.mjs (photo pipeline), gen-textures.mjs
 public/products/ 114 recovered product photos
-docs/           internal reference — NOT shipped
+docs/pitches/   product pitch notes
+prompt.md       prompt log — see §7
 ```
 
 **Data flow:** `content/products/*` → `lib/products.ts` helpers → pages.

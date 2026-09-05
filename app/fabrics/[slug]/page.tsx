@@ -14,6 +14,7 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { AddToQuote } from "@/components/AddToQuote";
 import { ProductCard } from "@/components/ProductCard";
 import { FabricTexture, STRUCTURE_LABELS } from "@/components/textures/FabricTexture";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export function generateStaticParams() {
   return getAllProducts().map((p) => ({ slug: p.slug }));
@@ -218,6 +219,8 @@ export default async function ProductPage({ params }: PageProps<"/fabrics/[slug]
               </a>{" "}
               · {site.hours}
             </p>
+
+            <ShareButtons />
           </div>
         </div>
 
