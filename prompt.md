@@ -360,3 +360,42 @@ entries were written after implementation.
 §7 covers this, but it's worth noting that the placeholder entry (## 19 — Homework 3)
 left blank in the file was a reminder that logging was still owed. Placeholders with blank
 fields are better than no placeholder at all — they make the gap visible.
+
+---
+
+## 23 — Vercel deployment
+
+**Date:** 7 Sep 2026
+
+> `can u pls deploy it on vercel real quick`
+
+**Produced:** checked the project setup (static export, custom image loader), confirmed
+Vercel CLI was installed, instructed the user to run `vercel login` then `vercel --prod`.
+After a "Not authorized" error the user logged in via the device-flow URL and re-ran the
+deploy. Built cleanly in 9 s, 54 pages, aliased to `kkknitwear-hw3.vercel.app`.
+
+**Worth noting:** "real quick" is a useful signal — it ruled out anything that needed
+config files, framework research, or back-and-forth decisions. The right response was a
+single command, not a tutorial. The only friction was the missing login, which a CLI tool
+cannot avoid on a fresh machine.
+
+---
+
+## 24 — Share buttons upgrade
+
+**Date:** 7 Sep 2026
+
+> `i mean what feature u have added its i know about that but its not visible enought , but u see its ok its fine add a generic share copy link , whatttap share etc becoz that would be help full`
+
+**Produced:** rewrote `components/ShareButtons.tsx` — replaced plain text links with
+five pill-style buttons: Copy link (clipboard API with "Copied!" feedback), WhatsApp
+(pre-filled with fabric name + URL), Facebook, X, LinkedIn. Each button has a
+brand-coloured hover state so they read as distinct actions. Passed `productName` prop
+through from the product detail page so the WhatsApp message is specific to the fabric.
+Committed and deployed to production.
+
+**Worth noting:** "its not visible enought" was the key diagnostic — it identified the
+problem (plain `<a>` tags styled like footnotes) without needing to name the fix. "copy
+link , whatttap share" was precise enough to know exactly what to add. The "becoz that
+would be help full" rationale confirmed the WhatsApp button should generate a useful
+pre-filled message, not just open WhatsApp. Typos did not reduce signal at all.
