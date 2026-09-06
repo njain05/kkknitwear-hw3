@@ -220,7 +220,7 @@ export default async function ProductPage({ params }: PageProps<"/fabrics/[slug]
               · {site.hours}
             </p>
 
-            <ShareButtons />
+            <ShareButtons productName={product.name} />
           </div>
         </div>
 
